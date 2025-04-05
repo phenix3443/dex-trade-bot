@@ -1,0 +1,44 @@
+version: 2
+
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - id: "greeting"
+    main: ./app/greeting
+    binary: greeting
+    goos:
+      - darwin
+      - linux
+      - windows
+    goarch:
+      - amd64
+      - arm64
+    ldflags:
+      - -s -w
+      - -X main.AppName=greeting
+      - -X main.Version={{.Version}}
+      - -X main.Commit={{.ShortCommit}}
+    ignore:
+      - goos: windows
+        goarch: arm64
+        
+archives:
+  - formats: [tar.gz]
+    format_overrides:
+      - goos: windows
+        formats: zip
+    files:
+      - README.md
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
+
+release:
+  replace_existing_artifacts: true
