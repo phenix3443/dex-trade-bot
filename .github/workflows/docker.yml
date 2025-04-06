@@ -12,7 +12,7 @@ env:
   DOCKER_REGISTRY: ghcr.io
   DOCKER_USERNAME: ${{ github.actor }}
   DOCKER_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
-  IMAGE_NAME: ghcr.io/phenix3443/go-starter
+  IMAGE_NAME: ghcr.io/phenix3443/dex-trade-bot
 
 jobs:
   docker:

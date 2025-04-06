@@ -1,4 +1,4 @@
-# go-starter
+# dex-trade-bot
 
 golang starter 是一个适用于 golang 开发环境的配置模板。
 

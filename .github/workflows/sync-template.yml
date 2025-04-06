@@ -12,7 +12,7 @@ jobs:
 
       - name: Add Upstream Repo
         run: |
-          git remote add upstream https://github.com/phenix3443/go-starter.git
+          git remote add upstream https://github.com/phenix3443/dex-trade-bot.git
           git fetch upstream
 
       - name: Merge Changes

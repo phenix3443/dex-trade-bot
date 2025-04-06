@@ -3,7 +3,7 @@
 {
   "name": "Go Starter",
   "dockerComposeFile": "docker-compose.yml",
-  "service": "golang",
+  "service": "app",
   "workspaceFolder": "/workspace",
   "postCreateCommand": {
     "safe-directory": "git config --local --add safe.directory ${containerWorkspaceFolder}",

@@ -10,7 +10,7 @@ lint:
 ###                        Docker                                           ###
 ###############################################################################
 DOCKER := $(shell which docker)
-DOCKER_IMAGE := phenix3443/go-starter
+DOCKER_IMAGE := phenix3443/dex-trade-bot
 COMMIT_HASH := $(shell git rev-parse --short=7 HEAD)
 DOCKER_TAG := $(COMMIT_HASH)
 
